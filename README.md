@@ -16,6 +16,7 @@ g++ main.cpp -DLOCK=1 -o FileLockExample (with filelocking)
 ```
 
 ## Usage
+### 1 process
 ```
 ../FileLock-Example % ./FileLockExample 
 The current balance is 100$
