@@ -26,4 +26,15 @@ The current balance is 140$
 The balance was increased to 160$
 The current balance is 160$
 The balance was increased to 180$
-``
+```
+
+## Clang-Format
+Create clang-format file
+```
+clang-format -style=google -dump-config > .clang-format
+```
+
+Format C++ File with clang-format
+```
+clang-format -style=file -i main.cpp
+```
