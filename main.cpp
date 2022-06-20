@@ -74,8 +74,8 @@ ssize_t writeBalance(int balance) {
 int main(int argc, char *argv[]) {
 
 #ifdef LOCK
-	int lockFd = open(LOCKFILE, O_CREAT);
-	if ( flock(lockFd, LOCK_EX) == -1 ) {
+	int lockFd = open(LOCKFILE, O_RDWR | O_CREAT, 0666);
+	if ( flock(lockFd, LOCK_EX ) == -1 ) {
         std::cout << "ERROR\n";
     }
 #endif
