@@ -16,7 +16,7 @@ g++ main.cpp -DLOCK=1 -o FileLockExample (with filelocking)
 ```
 
 ## Usage
-### 1 process
+### 1 process (without filelocking)
 ```
 ../FileLock-Example % ./FileLockExample 
 The current balance is 100$
@@ -28,6 +28,11 @@ The balance was increased to 160$
 The current balance is 160$
 The balance was increased to 180$
 ```
+
+### 2 processes (without filelocking)
+| Process 1 | Process 2  |
+| ------ | --------- |
+|../FileLock-Example % ./FileLockExample <br> The current balance is 100$ <br> The balance was increased to 120$ <br> The current balance is 140$ <br> The balance was increased to 160$ <br> The current balance is 180$ <br> The balance was increased to 200$ <br> The current balance is 220$ <br> The balance was increased to 240$ | ../FileLock-Example % ./FileLockExample <br> The current balance is 120$ <br> The balance was increased to 140$ <br> The current balance is 160$ <br> The balance was increased to 180$ <br> The current balance is 200$ <br> The balance was increased to 220$ <br> The current balance is 240$ <br> The balance was increased to 260$ |
 
 ## Clang-Format
 Create clang-format file
